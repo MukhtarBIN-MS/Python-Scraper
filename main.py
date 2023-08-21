@@ -70,7 +70,7 @@ def scrape_business_info(url):
 search_query = "logistics business"
 
 # Location-based search query
-location = "Detroit"
+location = "Texas"
 
 # Number of websites to search and scrape
 num_websites = 100
@@ -100,20 +100,19 @@ for website in websites:
 
     print("Business Name:", business_name, 'Email:', email, 'Phone:', phone)
 
-print('done')
-# print("Business Name:", business_names, 'Email:', emails, 'Phone:', phones)
-# Create a DataFrame from the scraped data
-# data = {
-#     'Business name': business_names,
-#     'Email': emails,
-#     'Phone': phones
-# }
-# df = pd.DataFrame(data)
-# print(df)
-#
-#
-# # Generate the filename based on the search query
-# filename = f"{search_query.replace(' ', '_')}_business_information.xlsx"
-#
-# # Save the DataFrame to an Excel file with the search query included in the filename
-# df.to_excel(filename, index=False)
+print("Business Name:", business_names, 'Email:', emails, 'Phone:', phones)
+Create a DataFrame from the scraped data
+data = {
+    'Business name': business_names,
+    'Email': emails,
+    'Phone': phones
+}
+df = pd.DataFrame(data)
+print(df)
+
+
+# Generate the filename based on the search query
+filename = f"{search_query.replace(' ', '_')}_business_information.xlsx"
+
+# Save the DataFrame to an Excel file with the search query included in the filename
+df.to_excel(filename, index=False)
